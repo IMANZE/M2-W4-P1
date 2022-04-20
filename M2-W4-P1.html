@@ -54,7 +54,6 @@
       */
 
       const changeTitle = function (newTitle) {
-        
         let h1 = document.getElementsByTagName("h1");
         h1[0].innerText = newTitle;
       };
@@ -64,8 +63,8 @@
       */
 
       const addClassToTitle = function () {
-        let newH1 = document.getElementsByTagName ("h1")
-        newH1[0].classList.add ("myHeading")
+        let newH1 = document.getElementsByTagName("h1");
+        newH1[0].classList.add("myHeading");
       };
 
       /* EXERCISE 3
@@ -73,7 +72,12 @@
       */
 
       const changePcontent = function (newP) {
-        //
+        let pTags = document.querySelectorAll("div > p");
+
+        for (let i = 0; i < pTags.length; i++) {
+          const singlePTags = pTags[i];
+          singlePTags.innerText = newP;
+        }
       };
 
       /* EXERCISE 4
