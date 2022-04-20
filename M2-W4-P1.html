@@ -73,7 +73,6 @@
 
       const changePcontent = function (newP) {
         let pTags = document.querySelectorAll("div > p");
-
         for (let i = 0; i < pTags.length; i++) {
           const singlePTags = pTags[i];
           singlePTags.innerText = newP;
@@ -85,7 +84,14 @@
       */
 
       const changeUrls = function () {
-        //
+        let hrefProperty = document.getElementsByTagName("a");
+
+        for (let index = 0; index < hrefProperty.length; index++) {
+          const singleHrefProperty = hrefProperty[index].attributes;
+          for (let index = 0; index < singleHrefProperty.length; index++) {
+            singleHrefProperty[index].value = "https://www.google.com";
+          }
+        }
       };
 
       /* EXERCISE 5
