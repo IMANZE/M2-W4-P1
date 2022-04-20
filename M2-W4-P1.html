@@ -151,13 +151,16 @@
           headerColor[0].style.color = `rgb(${randomColor1},${randomColor2},${randomColor3})`;
         });
       };
-     
+
       /* EXERCISE 10
        Change the footer text with something else when the user clicks on it.
       */
 
       const changeFooterText = function () {
-        //
+        let newFooterText = document.getElementsByTagName("h2");
+        newFooterText[1].addEventListener("click", function () {
+          newFooterText[1].innerText = "I Love Ezi";
+        });
       };
 
       /* EXERCISE 11
