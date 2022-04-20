@@ -168,7 +168,11 @@
       */
 
       const inputField = document.getElementById("input-field");
-      // ...
+      let arrayInputValue = [];
+      inputField.addEventListener("input", function (e) {
+        arrayInputValue.push(e.data);
+        console.log(arrayInputValue);
+      });
 
       /* EXERCISE 12
        Create a welcome alert message when the page successfully loads.
