@@ -85,8 +85,7 @@
 
       const changeUrls = function () {
         let hrefProperty = document.getElementsByTagName("a");
-
-        for (let index = 0; index < hrefProperty.length; index++) {
+          for (let index = 0; index < hrefProperty.length; index++) {
           const singleHrefProperty = hrefProperty[index].attributes;
           for (let index = 0; index < singleHrefProperty.length; index++) {
             singleHrefProperty[index].value = "https://www.google.com";
@@ -99,7 +98,11 @@
       */
 
       const addToTheSecond = function (content) {
-        //
+        let newList = document.getElementById("secondList");
+        let secondOne = document.createElement("li")
+        secondOne.innerText = content
+        newList.appendChild(secondOne)
+        console.log(newList);
       };
 
       /* EXERCISE 6
