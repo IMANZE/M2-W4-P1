@@ -130,12 +130,11 @@
       */
 
       const paintItGreen = function () {
-        let greenColor = document.getElementsByTagName("ul")
+        let greenColor = document.getElementsByTagName("ul");
         for (let index = 0; index < greenColor.length; index++) {
-         let singleUl = greenColor[index];
-          singleUl.style.color = "green"
+          let singleUl = greenColor[index];
+          singleUl.style.color = "green";
         }
-        
       };
 
       /* EXERCISE 9
@@ -143,9 +142,16 @@
       */
 
       const makeItClickable = function () {
-        //
+        let headerColor = document.getElementsByTagName("h1");
+        headerColor[0].addEventListener("click", function () {
+          let changePriceColor = document.getElementsByClassName("price");
+          let randomColor1 = Math.floor(Math.random() * (256 - 0) + 0);
+          let randomColor2 = Math.floor(Math.random() * (256 - 0) + 0);
+          let randomColor3 = Math.floor(Math.random() * (256 - 0) + 0);
+          headerColor[0].style.color = `rgb(${randomColor1},${randomColor2},${randomColor3})`;
+        });
       };
-
+     
       /* EXERCISE 10
        Change the footer text with something else when the user clicks on it.
       */
