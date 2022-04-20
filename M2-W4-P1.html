@@ -130,7 +130,12 @@
       */
 
       const paintItGreen = function () {
-        //
+        let greenColor = document.getElementsByTagName("ul")
+        for (let index = 0; index < greenColor.length; index++) {
+         let singleUl = greenColor[index];
+          singleUl.style.color = "green"
+        }
+        
       };
 
       /* EXERCISE 9
