@@ -158,8 +158,10 @@
 
       const changeFooterText = function () {
         let newFooterText = document.getElementsByTagName("h2");
-        newFooterText[1].addEventListener("click", function () {
-          newFooterText[1].innerText = "I Love Ezi";
+        // newFooterText[1].addEventListener("click", function () {
+        //   newFooterText[1].innerText = "I Love Ezi";
+        newFooterText[1].addEventListener("click", function (e) {
+          e.srcElement.innerText = "I Love Ezi";
         });
       };
 
